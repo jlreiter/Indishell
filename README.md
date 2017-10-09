@@ -52,7 +52,7 @@ Since I started doing CTFs i learned to always check images for random informati
 
 >Name in c.JPG: DocumentName:  u'EXIF:DocumentName': u'<style>body{font-size: 0;} h1{font-size: 12px !important;}</style>\<h1>\<?php echo "\<hr \/\>THIS IMAGE COULD ERASE YOUR WWW ACCOUNT, it shows you the PHP info instead...\<hr />"; phpinfo();   __halt_compiler(); ?></h1>hB?\x0f}???????:?\x1fM??\x13\x11\x02',
 
-The image is talking about embedded commands in image files. There might be a way to load the image, and if I can upload my own image, then I would be able to execute my own commands on the server albeit possibly with filtering or priviledge restrictions.
+The image is talking about embedded commands in image files. If I can upload and load my own image, then I might be able to execute my own commands on the server albeit possibly with filtering or priviledge restrictions.
 
 # Test.php
 
