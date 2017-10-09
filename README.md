@@ -60,17 +60,17 @@ The image is talking about embedded commands in image files. If I can upload and
 
 It wants a 'file' parameter. My first thought is that it is a path on the server and not necessarily on my host. I give it /etc/passwd. 
 
-![And it actually spits it back](Selection_057.png)
+![And it actually spits it back](/images/Selection_057.png)
 
 Kind of nice and kind of unexpected. I also know there is a phpmyadmin session running, I wonder if I can grab the config file where credentials should be stored. 
 
-![Nice!](Selection_065.png)
+![Nice!](/images/Selection_065.png)
 
 Root account and password: `root` and `roottoor`, but that's too easy. 
 
 How about just database credentials to explore the site a bit more. 
 
-![c.php](Selection_058.png)
+![c.php](/images/Selection_058.png)
 
 Now armed with `billu` and `b0x_billu` it's time to take a look into phpmyadmin.
 
