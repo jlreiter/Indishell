@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Sep 17 09:22:55 2017 as: nmap -vv -Pn -A -sC -sU -T 4 -&#45;top-ports 200 -oN /root/scripts/recon_enum/results/exam/192.168.2.55U.nmap -oX /root/scripts/recon_enum/results/exam/nmap/192.168.2.55U_nmap_scan_import.xml 192.168.2.55 -->
+<nmaprun scanner="nmap" args="nmap -vv -Pn -A -sC -sU -T 4 -&#45;top-ports 200 -oN /root/scripts/recon_enum/results/exam/192.168.2.55U.nmap -oX /root/scripts/recon_enum/results/exam/nmap/192.168.2.55U_nmap_scan_import.xml 192.168.2.55" start="1505658175" startstr="Sun Sep 17 09:22:55 2017" version="7.60" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="200" services="7,9,13,17,19,21-23,37,42,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,192,199,389,407,427,443,445,464,497,500,514-515,517-518,520,593,623,626,631,664,683,800,989-990,996-999,1001,1008,1019,1021-1034,1036,1038-1039,1041,1043-1045,1049,1068,1419,1433-1434,1645-1646,1701,1718-1719,1782,1812-1813,1885,1900,2000,2002,2048-2049,2148,2222-2223,2967,3052,3130,3283,3389,3456,3659,3703,4000,4045,4444,4500,4672,5000-5001,5060,5093,5351,5353,5355,5500,5632,6000-6001,6346,7938,9200,9876,10000,10080,11487,16680,17185,19283,19682,20031,22986,27892,30718,31337,32768-32773,32815,33281,33354,34555,34861-34862,37444,39213,41524,44968,49152-49154,49156,49158-49159,49162-49163,49165-49166,49168,49171-49172,49179-49182,49184-49196,49199-49202,49205,49208-49211,58002,65024"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1505658175"/>
+<taskend task="NSE" time="1505658175"/>
+<taskbegin task="NSE" time="1505658175"/>
+<taskend task="NSE" time="1505658175"/>
+<taskbegin task="ARP Ping Scan" time="1505658175"/>
+<taskend task="ARP Ping Scan" time="1505658175" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1505658175"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1505658175"/>
+<taskbegin task="UDP Scan" time="1505658175"/>
+<taskprogress task="UDP Scan" time="1505658206" percent="26.29" remaining="87" etc="1505658293"/>
+<taskprogress task="UDP Scan" time="1505658263" percent="55.07" remaining="72" etc="1505658335"/>
+<taskprogress task="UDP Scan" time="1505658293" percent="69.64" remaining="52" etc="1505658344"/>
+<taskprogress task="UDP Scan" time="1505658323" percent="82.86" remaining="31" etc="1505658354"/>
+<taskend task="UDP Scan" time="1505658379" extrainfo="200 total ports"/>
+<taskbegin task="Service scan" time="1505658379"/>
+<taskprogress task="Service scan" time="1505658424" percent="16.67" remaining="226" etc="1505658649"/>
+<taskend task="Service scan" time="1505658457" extrainfo="6 services on 1 host"/>
+<taskbegin task="NSE" time="1505658459"/>
+<taskend task="NSE" time="1505658459"/>
+<taskbegin task="NSE" time="1505658459"/>
+<taskend task="NSE" time="1505658460"/>
+<host starttime="1505658175" endtime="1505658460"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.55" addrtype="ipv4"/>
+<address addr="7C:D1:C3:EB:19:65" addrtype="mac" vendor="Apple"/>
+<hostnames>
+<hostname name="indishell.BreakfastHouse" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="194">
+<extrareasons reason="port-unreaches" count="194"/>
+</extraports>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="517"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="talk" method="table" conf="3"/></port>
+<port protocol="udp" portid="664"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="secure-aux-bus" method="table" conf="3"/></port>
+<port protocol="udp" portid="1034"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="activesync-notify" method="table" conf="3"/></port>
+<port protocol="udp" portid="49209"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="7"/>
+<osfingerprint fingerprint="SCAN(V=7.60%E=4%D=9/17%OT=%CT=%CU=7%PV=Y%DS=1%DC=D%G=N%M=7CD1C3%TM=59BE865C%P=x86_64-pc-linux-gnu)&#xa;SEQ(CI=I%II=I)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="1"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.2.55" rtt="167.21" host="indishell.BreakfastHouse"/>
+</trace>
+<times srtt="167211" rttvar="76492" to="473179"/>
+</host>
+<taskbegin task="NSE" time="1505658460"/>
+<taskend task="NSE" time="1505658460"/>
+<taskbegin task="NSE" time="1505658460"/>
+<taskend task="NSE" time="1505658460"/>
+<runstats><finished time="1505658460" timestr="Sun Sep 17 09:27:40 2017" elapsed="285.37" summary="Nmap done at Sun Sep 17 09:27:40 2017; 1 IP address (1 host up) scanned in 285.37 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

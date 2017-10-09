@@ -1,0 +1,57 @@
+# Nmap 7.60 scan initiated Sun Sep 17 08:58:25 2017 as: nmap -vv -Pn -A -sC -sS -T 4 -p- -oN /root/scripts/recon_enum/results/exam/192.168.2.55.nmap -oX /root/scripts/recon_enum/results/exam/nmap/192.168.2.55_nmap_scan_import.xml 192.168.2.55
+Increasing send delay for 192.168.2.55 from 0 to 5 due to 11 out of 21 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -198964 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -198964 microseconds.  Ignoring time.
+Nmap scan report for indishell.BreakfastHouse (192.168.2.55)
+Host is up, received arp-response (0.0015s latency).
+Scanned at 2017-09-17 08:58:25 CDT for 1469s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 5.9p1 Debian 5ubuntu1.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 fa:cf:a2:52:c4:fa:f5:75:a7:e2:bd:60:83:3e:7b:de (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAI5QAVizDlVqmOLpNWVWIrlKHova7oBbgwhrU09atBoe1sEsO3VZ5S0k9/30wyntzp4qxYQ7A5c7E+X5pyp8LpkcN1hIo2bJm0NQ7udu7F2fHON4B2tev8wRL2AkGLsJ9kD5BK6R37FPhqt/PqgjgcsCmkKMi8FileoIqWyAFiCTAAAAFQCeIu5JbJ7Dh0xGMZYk4VTCMrpoewAAAIB6Sy31WiHM3zDBCJYGDKzz/ye+d4Fpk6A6/tqLbuB1AOJt1R6j9gMsNIjXZCMjB+B9Jr2nJ3MS2GU4CssHxTvSCqmHaYvgNAtksUrT4hvGq7G/1mjSvQrv1h1Ldj2Pu32JMeqpHRs+gwAbkjQw6cEl/7bWozoG27rilLfIMoXg8AAAAIA8IvvxCyCTir30zAZu/Y3dXg/+k8OBg4i6SjU+StiG4JVhaKNAILX6N9K9iebLYjZOd8hxNFuZJcbj2u9Duh/xNO6BcSuggj3kFJXHGqUnhox4WEIYMmo5yTJufqzYRdxsV6MBeuAZ+3ZepEVSIGuqR8nfNNqEMTZ7U4aIZdQe4g==
+|   2048 88:31:0c:78:98:80:ef:33:fa:26:22:ed:d0:9b:ba:f8 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaXqMDcpdM8M5u2RXLI8goNnBivweZGfzM3Rytso14mgqWx9fe/LY8ooJY69q5tG2aarS0jciIHY5IbseJpHAky+qKSl1xjsbLF7WMGsHtKW9TZxcZsEvM52TVu9F11fYlsCBWrnwOCnvtE21C/XcDk146Gf8w24N9Vpa4tu5Z4tqOz+L6F1WxSROLiz4zQ2zXv41xAA6ILHZhVabS4RwKgYMO2yCchXBsup7NtRXTNwcy7QUbUxyMwd2C6lzkWH50Cndq1x1An+8v1QB41rYabNErwfv5O97pPN0nKMmslozea1eTteJQI2AksEmu/O8R8kISSlvd2Mr7pg+ZPtxj
+|   256 0e:5e:33:03:50:c9:1e:b3:e7:51:39:a4:4a:10:64:ca (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIQoc6hd0qrpQ4X2IoZUH6NkWPMdAw2PjpoL4a8djJlcU78ENRZDuvLqerDgAHB3ZNPbhzz6nyEbCXCh+p8Ykt8=
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.22 ((Ubuntu))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: --==[[IndiShell Lab]]==--
+MAC Address: 7C:D1:C3:EB:19:65 (Apple)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.8
+TCP/IP fingerprint:
+OS:SCAN(V=7.60%E=4%D=9/17%OT=22%CT=1%CU=33288%PV=Y%DS=1%DC=D%G=Y%M=7CD1C3%T
+OS:M=59BE853F%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%TS=8
+OS:)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B
+OS:4ST11NW7%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120
+OS:)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+OS:T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A
+OS:=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%D
+OS:F=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=4
+OS:0%CD=S)
+
+Uptime guess: 0.015 days (since Sun Sep 17 09:00:46 2017)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.49 ms indishell.BreakfastHouse (192.168.2.55)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 17 09:22:55 2017 -- 1 IP address (1 host up) scanned in 1469.85 seconds

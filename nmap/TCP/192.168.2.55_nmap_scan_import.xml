@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Sep 17 08:58:25 2017 as: nmap -vv -Pn -A -sC -sS -T 4 -p- -oN /root/scripts/recon_enum/results/exam/192.168.2.55.nmap -oX /root/scripts/recon_enum/results/exam/nmap/192.168.2.55_nmap_scan_import.xml 192.168.2.55 -->
+<nmaprun scanner="nmap" args="nmap -vv -Pn -A -sC -sS -T 4 -p- -oN /root/scripts/recon_enum/results/exam/192.168.2.55.nmap -oX /root/scripts/recon_enum/results/exam/nmap/192.168.2.55_nmap_scan_import.xml 192.168.2.55" start="1505656705" startstr="Sun Sep 17 08:58:25 2017" version="7.60" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1505656705"/>
+<taskend task="NSE" time="1505656705"/>
+<taskbegin task="NSE" time="1505656705"/>
+<taskend task="NSE" time="1505656705"/>
+<taskbegin task="ARP Ping Scan" time="1505656705"/>
+<taskend task="ARP Ping Scan" time="1505656706" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1505656706"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1505656706"/>
+<taskbegin task="SYN Stealth Scan" time="1505656706"/>
+<taskprogress task="SYN Stealth Scan" time="1505656737" percent="12.54" remaining="217" etc="1505656953"/>
+<taskprogress task="SYN Stealth Scan" time="1505656767" percent="14.61" remaining="357" etc="1505657124"/>
+<taskprogress task="SYN Stealth Scan" time="1505656797" percent="16.68" remaining="455" etc="1505657252"/>
+<taskprogress task="SYN Stealth Scan" time="1505656827" percent="18.75" remaining="525" etc="1505657351"/>
+<taskprogress task="SYN Stealth Scan" time="1505656857" percent="20.81" remaining="575" etc="1505657431"/>
+<taskprogress task="SYN Stealth Scan" time="1505656887" percent="25.34" remaining="534" etc="1505657420"/>
+<taskprogress task="SYN Stealth Scan" time="1505656944" percent="29.45" remaining="571" etc="1505657514"/>
+<taskprogress task="SYN Stealth Scan" time="1505657259" percent="51.13" remaining="529" etc="1505657788"/>
+<taskprogress task="SYN Stealth Scan" time="1505657358" percent="57.92" remaining="474" etc="1505657832"/>
+<taskprogress task="SYN Stealth Scan" time="1505657445" percent="63.92" remaining="418" etc="1505657862"/>
+<taskprogress task="SYN Stealth Scan" time="1505657529" percent="69.71" remaining="358" etc="1505657887"/>
+<taskprogress task="SYN Stealth Scan" time="1505657610" percent="75.28" remaining="297" etc="1505657907"/>
+<taskprogress task="SYN Stealth Scan" time="1505657688" percent="80.65" remaining="236" etc="1505657924"/>
+<taskprogress task="SYN Stealth Scan" time="1505657763" percent="85.82" remaining="175" etc="1505657938"/>
+<taskprogress task="SYN Stealth Scan" time="1505657838" percent="90.97" remaining="113" etc="1505657950"/>
+<taskprogress task="SYN Stealth Scan" time="1505657913" percent="96.14" remaining="49" etc="1505657961"/>
+<taskend task="SYN Stealth Scan" time="1505658166" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1505658166"/>
+<taskend task="Service scan" time="1505658172" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1505658174"/>
+<taskend task="NSE" time="1505658174"/>
+<taskbegin task="NSE" time="1505658174"/>
+<taskend task="NSE" time="1505658174"/>
+<host starttime="1505656705" endtime="1505658174"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.55" addrtype="ipv4"/>
+<address addr="7C:D1:C3:EB:19:65" addrtype="mac" vendor="Apple"/>
+<hostnames>
+<hostname name="indishell.BreakfastHouse" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="5.9p1 Debian 5ubuntu1.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 fa:cf:a2:52:c4:fa:f5:75:a7:e2:bd:60:83:3e:7b:de (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAI5QAVizDlVqmOLpNWVWIrlKHova7oBbgwhrU09atBoe1sEsO3VZ5S0k9/30wyntzp4qxYQ7A5c7E+X5pyp8LpkcN1hIo2bJm0NQ7udu7F2fHON4B2tev8wRL2AkGLsJ9kD5BK6R37FPhqt/PqgjgcsCmkKMi8FileoIqWyAFiCTAAAAFQCeIu5JbJ7Dh0xGMZYk4VTCMrpoewAAAIB6Sy31WiHM3zDBCJYGDKzz/ye+d4Fpk6A6/tqLbuB1AOJt1R6j9gMsNIjXZCMjB+B9Jr2nJ3MS2GU4CssHxTvSCqmHaYvgNAtksUrT4hvGq7G/1mjSvQrv1h1Ldj2Pu32JMeqpHRs+gwAbkjQw6cEl/7bWozoG27rilLfIMoXg8AAAAIA8IvvxCyCTir30zAZu/Y3dXg/+k8OBg4i6SjU+StiG4JVhaKNAILX6N9K9iebLYjZOd8hxNFuZJcbj2u9Duh/xNO6BcSuggj3kFJXHGqUnhox4WEIYMmo5yTJufqzYRdxsV6MBeuAZ+3ZepEVSIGuqR8nfNNqEMTZ7U4aIZdQe4g==&#xa;  2048 88:31:0c:78:98:80:ef:33:fa:26:22:ed:d0:9b:ba:f8 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaXqMDcpdM8M5u2RXLI8goNnBivweZGfzM3Rytso14mgqWx9fe/LY8ooJY69q5tG2aarS0jciIHY5IbseJpHAky+qKSl1xjsbLF7WMGsHtKW9TZxcZsEvM52TVu9F11fYlsCBWrnwOCnvtE21C/XcDk146Gf8w24N9Vpa4tu5Z4tqOz+L6F1WxSROLiz4zQ2zXv41xAA6ILHZhVabS4RwKgYMO2yCchXBsup7NtRXTNwcy7QUbUxyMwd2C6lzkWH50Cndq1x1An+8v1QB41rYabNErwfv5O97pPN0nKMmslozea1eTteJQI2AksEmu/O8R8kISSlvd2Mr7pg+ZPtxj&#xa;  256 0e:5e:33:03:50:c9:1e:b3:e7:51:39:a4:4a:10:64:ca (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIQoc6hd0qrpQ4X2IoZUH6NkWPMdAw2PjpoL4a8djJlcU78ENRZDuvLqerDgAHB3ZNPbhzz6nyEbCXCh+p8Ykt8="><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAI5QAVizDlVqmOLpNWVWIrlKHova7oBbgwhrU09atBoe1sEsO3VZ5S0k9/30wyntzp4qxYQ7A5c7E+X5pyp8LpkcN1hIo2bJm0NQ7udu7F2fHON4B2tev8wRL2AkGLsJ9kD5BK6R37FPhqt/PqgjgcsCmkKMi8FileoIqWyAFiCTAAAAFQCeIu5JbJ7Dh0xGMZYk4VTCMrpoewAAAIB6Sy31WiHM3zDBCJYGDKzz/ye+d4Fpk6A6/tqLbuB1AOJt1R6j9gMsNIjXZCMjB+B9Jr2nJ3MS2GU4CssHxTvSCqmHaYvgNAtksUrT4hvGq7G/1mjSvQrv1h1Ldj2Pu32JMeqpHRs+gwAbkjQw6cEl/7bWozoG27rilLfIMoXg8AAAAIA8IvvxCyCTir30zAZu/Y3dXg/+k8OBg4i6SjU+StiG4JVhaKNAILX6N9K9iebLYjZOd8hxNFuZJcbj2u9Duh/xNO6BcSuggj3kFJXHGqUnhox4WEIYMmo5yTJufqzYRdxsV6MBeuAZ+3ZepEVSIGuqR8nfNNqEMTZ7U4aIZdQe4g==</elem>
+<elem key="fingerprint">facfa252c4faf575a7e2bd60833e7bde</elem>
+<elem key="bits">1024.0</elem>
+<elem key="type">ssh-dss</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDaXqMDcpdM8M5u2RXLI8goNnBivweZGfzM3Rytso14mgqWx9fe/LY8ooJY69q5tG2aarS0jciIHY5IbseJpHAky+qKSl1xjsbLF7WMGsHtKW9TZxcZsEvM52TVu9F11fYlsCBWrnwOCnvtE21C/XcDk146Gf8w24N9Vpa4tu5Z4tqOz+L6F1WxSROLiz4zQ2zXv41xAA6ILHZhVabS4RwKgYMO2yCchXBsup7NtRXTNwcy7QUbUxyMwd2C6lzkWH50Cndq1x1An+8v1QB41rYabNErwfv5O97pPN0nKMmslozea1eTteJQI2AksEmu/O8R8kISSlvd2Mr7pg+ZPtxj</elem>
+<elem key="fingerprint">88310c789880ef33fa2622edd09bbaf8</elem>
+<elem key="bits">2048.0</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIQoc6hd0qrpQ4X2IoZUH6NkWPMdAw2PjpoL4a8djJlcU78ENRZDuvLqerDgAHB3ZNPbhzz6nyEbCXCh+p8Ykt8=</elem>
+<elem key="fingerprint">0e5e330350c91eb3e75139a44a1064ca</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.22 (Ubuntu)"><elem>Apache/2.2.22 (Ubuntu)</elem>
+</script><script id="http-title" output="-&#45;==[[IndiShell Lab]]==-&#45;"><elem key="title">-&#45;==[[IndiShell Lab]]==-&#45;</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="33288"/>
+<osmatch name="Linux 3.2 - 4.8" accuracy="100" line="62168">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.60%E=4%D=9/17%OT=22%CT=1%CU=33288%PV=Y%DS=1%DC=D%G=Y%M=7CD1C3%T&#xa;OS:M=59BE853F%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%TS=8&#xa;OS:)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B&#xa;OS:4ST11NW7%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120&#xa;OS:)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+&#xa;OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;OS:T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A&#xa;OS:=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%D&#xa;OS:F=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=4&#xa;OS:0%CD=S)&#xa;"/>
+</os>
+<uptime seconds="1329" lastboot="Sun Sep 17 09:00:46 2017"/>
+<distance value="1"/>
+<tcpsequence index="260" difficulty="Good luck!" values="E7492829,D47E3401,1A724ACA,CCE7DFDB,3DDFC85C,DF83DDB9"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="51969,51982,5199C,519B5,519CE,519E7"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.2.55" rtt="1.49" host="indishell.BreakfastHouse"/>
+</trace>
+<times srtt="1491" rttvar="67" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1505658175"/>
+<taskend task="NSE" time="1505658175"/>
+<taskbegin task="NSE" time="1505658175"/>
+<taskend task="NSE" time="1505658175"/>
+<runstats><finished time="1505658175" timestr="Sun Sep 17 09:22:55 2017" elapsed="1469.85" summary="Nmap done at Sun Sep 17 09:22:55 2017; 1 IP address (1 host up) scanned in 1469.85 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

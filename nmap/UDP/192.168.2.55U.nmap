@@ -1,0 +1,37 @@
+# Nmap 7.60 scan initiated Sun Sep 17 09:22:55 2017 as: nmap -vv -Pn -A -sC -sU -T 4 --top-ports 200 -oN /root/scripts/recon_enum/results/exam/192.168.2.55U.nmap -oX /root/scripts/recon_enum/results/exam/nmap/192.168.2.55U_nmap_scan_import.xml 192.168.2.55
+Increasing send delay for 192.168.2.55 from 0 to 50 due to 11 out of 15 dropped probes since last increase.
+Warning: 192.168.2.55 giving up on port because retransmission cap hit (6).
+Increasing send delay for 192.168.2.55 from 200 to 400 due to 11 out of 14 dropped probes since last increase.
+Increasing send delay for 192.168.2.55 from 400 to 800 due to 11 out of 22 dropped probes since last increase.
+Nmap scan report for indishell.BreakfastHouse (192.168.2.55)
+Host is up, received arp-response (0.17s latency).
+Scanned at 2017-09-17 09:22:55 CDT for 285s
+Not shown: 194 closed ports
+Reason: 194 port-unreaches
+PORT      STATE         SERVICE           REASON      VERSION
+68/udp    open|filtered dhcpc             no-response
+514/udp   open|filtered syslog            no-response
+517/udp   open|filtered talk              no-response
+664/udp   open|filtered secure-aux-bus    no-response
+1034/udp  open|filtered activesync-notify no-response
+49209/udp open|filtered unknown           no-response
+MAC Address: 7C:D1:C3:EB:19:65 (Apple)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.60%E=4%D=9/17%OT=%CT=%CU=7%PV=Y%DS=1%DC=D%G=N%M=7CD1C3%TM=59BE865C%P=x86_64-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT       ADDRESS
+1   167.21 ms indishell.BreakfastHouse (192.168.2.55)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 17 09:27:40 2017 -- 1 IP address (1 host up) scanned in 285.37 seconds
