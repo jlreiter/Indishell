@@ -104,7 +104,7 @@ Vulnerable kernel.
 
 ![Wget](/images/Selection_071.png)
 
-And run into no issues with priviledges, compiler errors, or anything. Quick and easy. 
+And run into no issues with privileges, compiler errors, or anything. Quick and easy. 
 
 ## Final Comments
 
