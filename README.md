@@ -50,7 +50,62 @@ The main page is quite intimidating.
 
 Since I started doing CTFs i learned to always check images for random information. I navigate to the images abd the uploaded_images directories and start grabbing everything. We happen to get lucky with CaptBarbossa.JPG. 
 
+>Name in c.JPG: DocumentName:  u'EXIF:DocumentName': u'<style>body{font-size: 0;} h1{font-size: 12px !important;}</style>\<h1>\<?php echo "\<hr \/\>THIS IMAGE COULD ERASE YOUR WWW ACCOUNT, it shows you the PHP info instead...\<hr />"; phpinfo();   __halt_compiler(); ?></h1>hB?\x0f}???????:?\x1fM??\x13\x11\x02',
 
+The image is talking about embedded commands in image files. There might be a way to load the image, and if I can upload my own image, then I would be able to execute my own commands on the server albeit possibly with filtering or priviledge restrictions.
 
+# Test.php
 
-![Standard info can be gathered from in.php](/images/Selection_053.png) PHP info can give reference to what is installed and where things might be located. 
+![The test.php page spits out an error](/images/Selection_056.png) 
+
+It wants a 'file' parameter. My first thought is that it is a path on the server and not necessarily on my host. I give it /etc/passwd. 
+
+![And it actually spits it back](Selection_057.png)
+
+Kind of nice and kind of unexpected. I also know there is a phpmyadmin session running, I wonder if I can grab the config file where credentials should be stored. 
+
+![Nice!](Selection_065.png)
+
+Root account and password: `root` and `roottoor`, but that's too easy. 
+
+How about just database credentials to explore the site a bit more. 
+
+![c.php](Selection_058.png)
+
+Now armed with `billu` and `b0x_billu` it's time to take a look into phpmyadmin.
+
+# PHPMyAdmin
+
+The credentials were correct and I'm logged in. From here I just take a look at all the data. I did attempt a phpmyadmin root attempt (18371.rb LFI via XXE injection), but was unsuccessful.  In the rest of the database, I can see usernames and images. One of the users has the barbossa picture as the profile. Grab the credentials from the auth table `biLLu` and `hEx_it` (or make your own) and move onto the login page. 
+
+# Straw Hat
+
+Upon login we are greeted with a nice picture from OnePiece and the option to either 'Show Users' or 'Add User'.
+
+![logged in](/images/Selection_063.png)
+
+Adding a user requires a name and an image. Obviously I have to stick with the pirate theme. I grabbed the image of Jack Sparrow and made it my own in true pirate fashion. Remembering from earlier that it might be possible to include the image for command execution, I added a nice php passthru to Jack. 
+
+![Cunning Jack](/images/Selection_067.png)
+
+Now that my user is created, I can 'Show Users'. From the earlier page (test.php) I think I can just put a file parameter in the body to load my image for execution. I don't have the image unfortunately, but it works! Now I have command execution through my ?cmd= parameter. I quickly throw up a shell and connect back to my box. 
+
+![NC](/images/Selection_068.png)
+
+# Boot 2 Root
+
+Without using the root credentials I have, I practice some quick enumeration. 
+
+![uname](/images/Selection_069.png)
+
+Vulnerable kernel. 
+
+![Searchsploit](/images/Selection_070.png)
+
+![Wget](/images/Selection_071.png)
+
+And run into no issues with priviledges, compiler errors, or anything. Quick and easy. 
+
+## Final Comments
+
+This was one of the easier boxes I've played with so far, but sets to teach an important skill for file inclusion, testing different HTTP headers (switching from GET to POST when appropriate), and that not everything has to be difficult.
