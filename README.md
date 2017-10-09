@@ -88,7 +88,7 @@ Adding a user requires a name and an image. Obviously I have to stick with the p
 
 ![Cunning Jack](/images/Selection_067.png)
 
-Now that my user is created, I can 'Show Users'. From the earlier page (test.php) I think I can just put a file parameter in the body to load my image for execution. I don't have the image unfortunately, but it works! Now I have command execution through my ?cmd= parameter. I quickly throw up a shell and connect back to my box. 
+Now that my user is created, I can 'Show Users'. From the earlier page (test.php) I think I can just put a file parameter in the body to load my image for execution. I don't have the screenshot unfortunately, but it works! Now I have command execution through my ?cmd= parameter. I quickly throw up a shell and connect back to my box. 
 
 ![NC](/images/Selection_068.png)
 
